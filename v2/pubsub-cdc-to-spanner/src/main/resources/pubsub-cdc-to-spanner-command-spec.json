@@ -1,0 +1,7 @@
+{
+  "mainClass": "com.google.cloud.teleport.v2.templates.PubSubCdcToSpanner",
+  "classPath": "/template/pubsub-cdc-to-spanner/*:/template/pubsub-cdc-to-spanner/libs/*:/template/pubsub-cdc-to-spanner/classes",
+  "defaultParameterValues": {
+    "labels": "{\"goog-dataflow-provided-template-type\":\"flex\",\"goog-dataflow-provided-template-name\":\"pubsub_cdc_to_spanner\"}"
+  }
+}
