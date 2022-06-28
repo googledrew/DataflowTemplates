@@ -1,4 +1,4 @@
-# DataStream to Spanner Dataflow Template
+# PubSub CDC to Spanner Dataflow Template
 
 The [PubSubCdcToSpanner](src/main/java/com/google/cloud/teleport/v2/templates/PubSubCdcToSpanner.java) pipeline
 ingests Striim CDC changes from Pub/Sub subscription and writes the records in Cloud Spanner database.
