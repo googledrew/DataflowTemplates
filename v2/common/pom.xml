@@ -156,7 +156,7 @@
               <artifactId>protobuf-maven-plugin</artifactId>
               <version>0.6.1</version>
               <configuration>
-                <protocArtifact>com.google.protobuf:protoc:${protoc.version}:exe:${os.detected.classifier}</protocArtifact>
+                <protocArtifact>com.google.protobuf:protoc:${protoc.version}:exe:osx-x86_64</protocArtifact>
                 <writeDescriptorSet>true</writeDescriptorSet>
                 <includeDependenciesInDescriptorSet>true</includeDependenciesInDescriptorSet>
                 <descriptorSetFileName>schema.pb</descriptorSetFileName>
