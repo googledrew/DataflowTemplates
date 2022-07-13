@@ -1,0 +1,56 @@
+{
+    "name":"PubSub CDC to Redis",
+    "description": "Replicate Pub/Sub Data into Redis",
+    "parameters":[
+        {
+            "name":"inputSubscription",
+            "label":"Source PubSub Subscription ID",
+            "helpText":"Full subscription reference",
+            "paramType":"TEXT"
+        },
+        {
+            "name":"redisIpAddress",
+            "label":"Target Redis IP Address",
+            "helpText":"Target Redis IP Address",
+            "paramType":"TEXT"
+        },
+        {
+            "name":"redisPort",
+            "label":"Target Redis port",
+            "helpText":"Target Redis port",
+            "paramType":"TEXT"
+        },
+        {
+            "name":"deadLetterQueueDirectory",
+            "label":"Deadletter Queue GCS PATH",
+            "helpText":"Deadletter Queue GCS PATH",
+            "paramType":"TEXT",
+            "isOptional": true
+        },
+        {
+            "name":"autoscalingAlgorithm",
+            "label":"Autoscaling algorithm to use",
+            "helpText":"Autoscaling algorithm to use: THROUGHPUT_BASED",
+            "paramType":"TEXT",
+            "isOptional":true
+        },
+        {
+            "name":"numWorkers","label":"Number of workers Dataflow will start with",
+            "helpText":"Number of workers Dataflow will start with",
+            "paramType":"TEXT",
+            "isOptional":true
+        },
+        {
+            "name":"maxNumWorkers","label":"Maximum number of workers Dataflow job will use",
+            "helpText":"Maximum number of workers Dataflow job will use",
+            "paramType":"TEXT",
+            "isOptional":true
+        },
+        {
+            "name":"workerMachineType","label":"Worker Machine Type to use in Dataflow Job",
+            "helpText":"Machine Type to Use: n1-standard-4",
+            "paramType":"TEXT",
+            "isOptional":true
+        }
+    ]
+}
