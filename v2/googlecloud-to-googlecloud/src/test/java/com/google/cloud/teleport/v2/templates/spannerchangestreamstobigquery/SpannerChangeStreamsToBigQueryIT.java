@@ -146,7 +146,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -223,7 +224,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("useStorageWriteApiAtLeastOnce", "false")
                     .addParameter("numStorageWriteApiStreams", "1")
                     .addParameter("storageWriteApiTriggeringFrequencySec", "10")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -283,7 +285,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -350,7 +353,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -455,7 +459,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -543,7 +548,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -672,7 +678,8 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("spannerChangeStreamName", testName + "_stream")
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
-                    .addParameter("dlqRetryMinutes", "3")));
+                    .addParameter("dlqRetryMinutes", "3")
+                    .addParameter("usePublicIps", "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
