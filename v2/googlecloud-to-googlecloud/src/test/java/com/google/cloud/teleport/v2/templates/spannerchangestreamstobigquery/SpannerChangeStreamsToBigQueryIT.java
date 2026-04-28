@@ -147,7 +147,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -225,7 +225,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("numStorageWriteApiStreams", "1")
                     .addParameter("storageWriteApiTriggeringFrequencySec", "10")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -286,7 +286,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -354,7 +354,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -460,7 +460,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -549,7 +549,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 
@@ -679,7 +679,7 @@ public class SpannerChangeStreamsToBigQueryIT extends TemplateTestBase {
                     .addParameter("bigQueryDataset", bigQueryResourceManager.getDatasetId())
                     .addParameter("rpcPriority", "HIGH")
                     .addParameter("dlqRetryMinutes", "3")
-                    .addParameter("usePublicIps", "false")));
+                    .addParameter("usePublicIps", System.getenv("DATAFLOW_USE_PUBLIC_IPS") != null ? System.getenv("DATAFLOW_USE_PUBLIC_IPS") : "false")));
 
     assertThatPipeline(launchInfo).isRunning();
 

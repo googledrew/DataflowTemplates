@@ -124,6 +124,14 @@ public final class FlexTemplateClient extends AbstractPipelineLauncher {
       }
     }
 
+    if (additionalOptions.stream().noneMatch(option -> option.startsWith("usePublicIps="))) {
+      String usePublicIps = System.getenv("DATAFLOW_USE_PUBLIC_IPS");
+      if (usePublicIps != null && !usePublicIps.isEmpty()) {
+         additionalOptions.add("usePublicIps=" + usePublicIps);
+         LOG.info("Injected usePublicIps={} from environment into additionalPipelineOptions", usePublicIps);
+      }
+    }
+
     if (additionalOptions.stream().noneMatch(option -> option.startsWith("updateCompatibilityVersion="))) {
       additionalOptions.add("updateCompatibilityVersion=" + ReleaseInfo.getReleaseInfo().getVersion());
     }
