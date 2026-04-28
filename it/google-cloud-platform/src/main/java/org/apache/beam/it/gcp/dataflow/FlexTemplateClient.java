@@ -111,17 +111,24 @@ public final class FlexTemplateClient extends AbstractPipelineLauncher {
       environment.setLauncherMachineType(System.getProperty("launcherMachineType"));
     }
 
-    if (environment.getAdditionalPipelineOptions() == null
-        || environment.getAdditionalPipelineOptions().stream()
-            .noneMatch(option -> option.startsWith("updateCompatibilityVersion="))) {
-      ArrayList<String> additionalOptions = new ArrayList<>();
-      if (environment.getAdditionalPipelineOptions() != null) {
-        additionalOptions.addAll(environment.getAdditionalPipelineOptions());
-      }
-      additionalOptions.add(
-          "updateCompatibilityVersion=" + ReleaseInfo.getReleaseInfo().getVersion());
-      environment.setAdditionalPipelineOptions(additionalOptions);
+    ArrayList<String> additionalOptions = new ArrayList<>();
+    if (environment.getAdditionalPipelineOptions() != null) {
+      additionalOptions.addAll(environment.getAdditionalPipelineOptions());
     }
+    
+    if (additionalOptions.stream().noneMatch(option -> option.startsWith("serviceAccount="))) {
+      String sa = System.getenv("SERVICE_ACCOUNT_DATAFLOW_WORKERS");
+      if (sa != null && !sa.isEmpty()) {
+         additionalOptions.add("serviceAccount=" + sa);
+         LOG.info("Injected serviceAccount={} from environment into additionalPipelineOptions", sa);
+      }
+    }
+
+    if (additionalOptions.stream().noneMatch(option -> option.startsWith("updateCompatibilityVersion="))) {
+      additionalOptions.add("updateCompatibilityVersion=" + ReleaseInfo.getReleaseInfo().getVersion());
+    }
+    
+    environment.setAdditionalPipelineOptions(additionalOptions);
 
     return environment;
   }
